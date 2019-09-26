@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { firebaseApp } from "../firebase";
+import firebase from 'firebase/app';
 
 class SignUp extends Component {
 
@@ -18,7 +18,7 @@ class SignUp extends Component {
     signUp() {
         const { email, password } = this.state;
 
-        firebaseApp.auth().createUserWithEmailAndPassword( email, password )
+        firebase.auth().createUserWithEmailAndPassword( email, password )
             .catch( error => {
                 this.setState( {error } );
             });
@@ -27,7 +27,7 @@ class SignUp extends Component {
     render() {
         return(
             <div className={'form-inline'}>
-                <h2>Sign Up</h2>
+                <h2>Log In</h2>
                 <div className={'form-group'}>
                     <input
                         className={'form-control'}
@@ -47,8 +47,7 @@ class SignUp extends Component {
                         onClick={ () => this.signUp() }>Sign Up</button>
                 </div>
                 <div>{this.state.error.message}</div>
-                <div><Link to={'/signin'}>Sign In instead</Link></div>
-
+                <div className="instead"><Link to={'/signin'}>Create account</Link></div>
             </div>
         )
     }

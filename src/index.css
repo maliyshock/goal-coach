@@ -12,3 +12,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.btn, input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#root {
+  padding: 16px;
+  text-align: center;
+}
+
+.btn:first-child, input:first-child {
+  margin-left: 0;
+}
+
+.btn:last-child, input:last-child {
+  margin-right: 0;
+}
+
+.instead {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.app__row {
+  margin-bottom: 15px;
+}

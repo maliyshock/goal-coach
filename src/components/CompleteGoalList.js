@@ -24,13 +24,13 @@ class CompleteGoalList extends Component {
 
     render() {
         return(
-            <div>
+            <div className='app__row'>
                 {
                     this.props.completeGoals.map( (item,index) => {
-                        return <div key={index}>
+                        return <p key={index}>
                                     <del>{item.title}</del>
                                     <span> Completed by <em>{item.email}</em></span>
-                                </div>
+                                </p>
                     }
                 )}
                 <button

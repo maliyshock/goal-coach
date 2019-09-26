@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import { firebaseApp } from "../firebase";
+import firebase from 'firebase/app';
 import { connect } from 'react-redux'
 import AddGoal from './AddGoal'
 import GoalList from './GoalList'
 import CompleteGoalList from './CompleteGoalList'
-
-// const user = firebaseApp.auth().currentUser;
 
 class App extends Component {
 
@@ -17,7 +15,7 @@ class App extends Component {
     }
 
     signOut(){
-        firebaseApp.auth().signOut().then(
+        firebase.auth().signOut().then(
                 function() {},
                 function(error) {}
             );
@@ -26,7 +24,7 @@ class App extends Component {
 
     render() {
         return(
-            <div>
+            <div className="container">
                 <header>
                     <small>you logined as {this.props.user.email}</small>
                 </header>
