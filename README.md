@@ -4,6 +4,7 @@
 ## Зачем это?
 Просто для общей массы вещей, продемонсрировать что "а еще я делал и такое" и "а еще я тыкал и умею в эти штуки".
 
+## Далее про то как это поставить
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
